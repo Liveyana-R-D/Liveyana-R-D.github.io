@@ -17,31 +17,45 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #0d0221;
+      color: #ffffff;
       scroll-behavior: smooth;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     .navbar {
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background-color: #1a0033;
+      box-shadow: 0 2px 10px rgba(255, 0, 204, 0.2);
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #f5bfff !important;
     }
 
     .hero {
-      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background: linear-gradient(135deg, #da22ff, #9733ee, #ff00cc);
       color: white;
       padding: 100px 0;
       text-align: center;
+      box-shadow: 0 0 20px rgba(218, 34, 255, 0.4), 0 0 40px rgba(255, 0, 204, 0.3);
     }
 
     .hero h1 {
       font-size: 3rem;
       font-weight: 600;
       animation: fadeInDown 1s ease-in-out;
+      text-shadow: 0 0 10px #ff00cc;
     }
 
     .hero p {
       font-size: 1.2rem;
       margin-top: 10px;
       animation: fadeInUp 1s ease-in-out;
+      text-shadow: 0 0 10px #ff00cc;
     }
 
     @keyframes fadeInDown {
@@ -54,57 +68,82 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    .section-title {
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #ff99ff;
+      text-shadow: 0 0 10px #ff00cc;
+    }
+
     .card {
+      background-color: #1e003a;
+      border: none;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: white;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px #ff00cc;
     }
 
     .card img {
       height: 200px;
       object-fit: cover;
-    }
-
-    footer {
-      background-color: #222;
-      color: #ddd;
-    }
-
-    a {
-      text-decoration: none;
+      border-radius: 8px;
     }
 
     .btn-primary {
-      background-color: #2575fc;
+      background-color: #ff00cc;
       border: none;
+      color: white;
     }
 
     .btn-primary:hover {
-      background-color: #1a5ede;
+      background-color: #cc00aa;
+      box-shadow: 0 0 10px #ff00cc;
+    }
+
+    .btn-success {
+      background-color: #a700ff;
+      border: none;
+    }
+
+    .btn-success:hover {
+      background-color: #7d00cc;
+      box-shadow: 0 0 10px #da22ff;
+    }
+
+    .btn-outline-light:hover {
+      background-color: #ffffff22;
     }
 
     .contact-icons i {
       font-size: 1.5rem;
       margin: 0 10px;
-      color: #2575fc;
+      color: #ff00cc;
+      transition: 0.3s;
     }
 
-    .section-title {
-      font-weight: 600;
-      margin-bottom: 30px;
+    .contact-icons i:hover {
+      color: #ffffff;
+      transform: scale(1.2);
+    }
+
+    footer {
+      background-color: #1a0033;
+      color: #f5bfff;
+      text-shadow: 0 0 5px #ff00cc;
     }
   </style>
 </head>
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">Liveyana</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -127,11 +166,52 @@
   </div>
 </header>
 
-<!-- About Me -->
-<section id="about" class="container my-5 text-center">
-  <h2 class="section-title">About Me</h2>
-  <p class="lead">"I have completed my Master's in Computer Applications and have experience working with PHP, MySQL, HTML, CSS, Bootstrap, Python, and Django. I'm interested in web development, online tutoring, and data entry. I enjoy exploring new technologies to improve how I build and manage applications and websites."</p>
+<!-- About -->
+<section id="about" class="container my-5">
+  <h2 class="section-title text-center">About Me</h2>
+  <div class="text-light">
+    <p class="lead">I'm <strong>Liveyana</strong>, a Malaysian citizen born in Ipoh. My mom was a teacher, so I began learning from home during my early years, completing LKG and part of UKG before moving to India as a toddler.</p>
+
+    <p>I continued UKG and completed 6th grade at <strong>Good Shepherd Matriculation Higher Secondary School, Marthandam</strong>. From 7th to 10th, I studied at <strong>LMS Girls' Higher Secondary School</strong>, where I joined the <strong>Bharat Scouts and Guides</strong> and attended two camps — <em>Tritiya Sopan</em> and <em>Rajya Puraskar</em>.</p>
+
+    <ul>
+      <li><strong>10th (SSLC)</strong>: 454/500 (90.8%) – 2018</li>
+      <li><strong>12th (HSS)</strong>: 402/600 (67%) – 2020 at Government HSS, Munchirai</li>
+    </ul>
+
+    <p>Then I pursued a <strong>BSc in Computer Science</strong> at <strong>Nesamony Memorial Christian College, Marthandam</strong> (2023 – CGPA: 8.67), followed by an <strong>MCA at the same college</strong>, completed in 2025.</p>
+
+    <h5 class="mt-4 text-pink">💼 Internships</h5>
+    <ul>
+      <li>🖥️ <strong>Business Web Solutions, New Delhi</strong> – Remote (HTML, CSS, JS, Bootstrap, Tailwind, Python, Django)</li>
+      <li>🌐 <strong>OctaNe Services Pvt Ltd</strong> – Remote (Landing Page, To-Do List, Starbucks Clone)</li>
+      <li>🧠 <strong>Edge Interns</strong> – Remote (Handwritten Digital Recognition AI/ML)</li>
+      <li>📢 <strong>Codtech IT Solutions Pvt Ltd, Hyderabad</strong> – Remote (Digital Marketing)</li>
+      <li>🛠️ <strong>Unified Mentor, Gurugram</strong> – Remote (Fluffy Flip, Jowyn’s Path, Zephy the Lion, Gum Management, Catering Reservation System)</li>
+      <li>📱 <strong>Codec Technologies, Mumbai</strong> – Remote (Smart Home Control Dashboard, Food Delivery System UI/UX)</li>
+    </ul>
+
+    <h5 class="mt-4 text-pink">📁 Projects</h5>
+    <ul>
+      <li>🎂 <strong>Creamy Hub</strong> – Online Cake Shop (Mini Project – HTML, CSS, PHP, MySQL)</li>
+      <li>🛳️ <strong>Lion Cruise</strong> – Cruise Booking System (Major Project – HTML, CSS, JS, Bootstrap, PHP, MySQL)</li>
+      <li>❌⭕ <strong>Tic-Tac-Toe Game</strong> – Android (XML, Java – Installed on local devices)</li>
+    </ul>
+
+    <h5 class="mt-4 text-pink">💡 Hobbies & Interests</h5>
+    <p>I love riding my bicycle, listening to music, playing with dolls, and even talking to myself to motivate and brainstorm ideas. I enjoy helping students with their college projects and have supported many through ChatGPT. I also did front-end freelance work via LinkedIn to earn some pocket money.</p>
+
+    <h5 class="mt-4 text-pink">🛠️ Skills</h5>
+    <ul class="mb-0">
+      <li>HTML, CSS, JavaScript, PHP, MySQL</li>
+      <li>Git, GitHub, VS Code, Sublime Text</li>
+      <li>MS Office, Typing (28 WPM)</li>
+    </ul>
+
+    <p class="mt-3">I'm passionate about <strong>web development</strong>, <strong>data entry</strong>, and being an <strong>online tutor</strong>. I'm always learning and exploring to grow professionally.</p>
+  </div>
 </section>
+
 
 <!-- Projects -->
 <section id="projects" class="container my-5">
@@ -273,7 +353,7 @@
         </div>
       </div>
     </div>
-n
+
     <!-- Project 11 -->
     <div class="col-md-4">
       <div class="card">
@@ -289,6 +369,8 @@ n
     
   </div>
 </section>
+
+  
 
 <!-- Contact -->
 <section id="contact" class="container my-5 text-center">
